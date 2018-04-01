@@ -6,7 +6,6 @@ class HeaderItem(val letter: Char, layoutId: Int) : BaseItem(layoutId) {
 
     override fun bind(holder: CachingViewHolder, position: Int) {
 
-        holder
         holder.textId.text = letter.toString()
     }
 }
