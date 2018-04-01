@@ -20,3 +20,4 @@ class MyAdapter(val myData: MutableList<BaseItem>) : RecyclerView.Adapter<Cachin
     override fun getItemViewType(position: Int): Int = myData[position].layoutID
 }
 ```
+[screenshot](readmeimages/screenshot.png)
