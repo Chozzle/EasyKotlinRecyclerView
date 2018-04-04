@@ -18,15 +18,16 @@ class MainActivity : AppCompatActivity() {
         val myData = mutableListOf<BaseItem>()
         var letter = 'A'
         (0..500).forEach {
-            myData.add(HeaderItem(letter, R.layout.item_header))
+            myData.add(HeaderItem(letter))
 
             if (letter.toInt() < 'Z'.toInt()) {
                 letter++
             } else {
                 letter = 'A'
+                myData.add(ButtonItem())
             }
-            myData.add(ImageItem(R.layout.item_image))
-            myData.add(ImageItem(R.layout.item_image))
+            myData.add(ImageItem(ImageItem.Mode.MARGIN_RIGHT))
+            myData.add(ImageItem(ImageItem.Mode.MARGIN_LEFT))
         }
 
         recyclerView = recyclerViewID

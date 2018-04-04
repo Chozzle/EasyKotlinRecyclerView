@@ -1,8 +1,11 @@
 package com.example.carsonholzheimer.kotlinmultiitemrecyclerview
 
-abstract class BaseItem(val layoutID: Int) {
+import android.support.annotation.LayoutRes
+import android.view.View
 
-    open fun bind(holder: CachingViewHolder, position: Int) {
+abstract class BaseItem(@LayoutRes open val layoutID: Int) {
 
-    }
+    abstract fun bind(holder: BaseViewHolder, position: Int)
+
+    open fun createViewHolder(view: View) = BaseViewHolder(view)
 }
